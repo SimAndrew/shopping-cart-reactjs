@@ -1,5 +1,13 @@
+import Navbar from './Navbar.jsx';
+import CartContainer from './CartContainer.jsx';
+
 const App = () => {
-	return <h1>Shopping Cart</h1>;
+	return (
+		<main>
+			<Navbar />
+			<CartContainer />
+		</main>
+	);
 };
 
 export default App;
