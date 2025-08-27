@@ -2,6 +2,8 @@ import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 import { useGlobalContext } from './Context.jsx';
 
 const CartItem = ({ id, img, title, price, amount }) => {
+	const { remove } = useGlobalContext();
+
 	return (
 		<article className="cart-item">
 			<img src={img} alt={title} />
@@ -9,7 +11,8 @@ const CartItem = ({ id, img, title, price, amount }) => {
 			<div>
 				<h5>{title}</h5>
 				<span className="item-price">${price}</span>
-				<button className="remove-btn" onClick={() => console.log('remove')}>
+
+				<button className="remove-btn" onClick={() => remove(id)}>
 					remove
 				</button>
 			</div>
